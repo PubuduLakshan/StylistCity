@@ -1,0 +1,22 @@
+{
+  "name": "stylistcityapp",
+  "version": "1.0.0",
+  "description": "stylist online booking application",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PubuduLakshan/StylistCity.git"
+  },
+  "keywords": [
+    "stylist"
+  ],
+  "author": "pubudulakshan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PubuduLakshan/StylistCity/issues"
+  },
+  "homepage": "https://github.com/PubuduLakshan/StylistCity#readme"
+}
