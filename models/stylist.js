@@ -14,6 +14,11 @@ module.exports = (sequelize, DataTypes) => {
     Stylist.hasMany(models.Qualification);
     Stylist.hasMany(models.Image);
     Stylist.hasMany(models.Session);
+    Stylist.hasMany(models.Rating);
+    Stylist.hasMany(models.Job);
+    Stylist.hasMany(models.Comment);
+    Stylist.hasOne(models.User);
+  
   };
   return Stylist;
 };
