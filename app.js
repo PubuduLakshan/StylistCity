@@ -12,6 +12,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 var models = require('./models');
+
 models.sequelize.sync().then(()=>{
     console.log('database Updated!')
 }).catch((err)=>{
