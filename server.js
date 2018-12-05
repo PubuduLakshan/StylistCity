@@ -1,6 +1,7 @@
 const express = require('express');
-//const routesHome = require('./routes/homeApi');
+const homeApi = require('./app/routes/homeApi.js');
 const searchApi = require('./app/routes/searchApi.js');
+const stylistProfileApi = require('./app/routes/stylistProfileApi.js');
 const logger = require('morgan');
 const cors = require('cors');
 const bodyParser = require('body-parser');
@@ -21,7 +22,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 searchApi(app,db);
-
+homeApi(app,db);
+stylistProfileApi(app,db);
 
 
 

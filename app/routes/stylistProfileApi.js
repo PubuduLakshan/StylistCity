@@ -1,11 +1,20 @@
-const express = require('express');
-const router = express.Router();
-
-// Setup a default catch-all route that sends back a welcome message in JSON format.
-router.get('*', (req, res) => res.status(200).send({
-    message: 'Welcome to Stylist Profile',
-    })
-    );
+module.exports= function(app,db){
 
 
-module.exports=router;
+    app.get('/profile/:id', (req, res) => { 
+        //console.log(req.params.id);
+           
+            db.Stylist.findOne({
+               where:{id:req.params.id}
+              // include:[db.Skill,db.Gallery,db.Qualification]
+
+                    
+            }).then( (result) => {
+               //console.log(result);
+                
+                res.json(result)
+                } 
+                ); 
+    });
+    
+    }
