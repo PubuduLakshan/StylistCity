@@ -6,7 +6,7 @@ module.exports= function(app,db){
            
             db.Stylist.findOne({
                where:{id:req.params.id},
-                include:[db.Skill,db.Qualification,db.Image]
+                include:[db.Skill,db.Qualification,db.Image,db.charges,db.ratingstar]
 
                     
             }).then( (result) => {

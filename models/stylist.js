@@ -11,6 +11,7 @@ module.exports = (sequelize, DataTypes) => {
   Stylist.associate = function(models) {
     // associations can be defined here
     Stylist.hasMany(models.Skill);
+    Stylist.hasOne(models.charges);
     Stylist.hasMany(models.Qualification);
     Stylist.hasMany(models.Image);
     Stylist.hasMany(models.Session);
@@ -18,6 +19,7 @@ module.exports = (sequelize, DataTypes) => {
     Stylist.hasMany(models.Job);
     Stylist.hasMany(models.Comment);
     Stylist.hasOne(models.User);
+    Stylist.hasOne(models.ratingstar);
   
   };
   return Stylist;
