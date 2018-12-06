@@ -5,12 +5,12 @@ module.exports= function(app,db){
         //console.log(req.params.id);
            
             db.Stylist.findOne({
-               where:{id:req.params.id}
-              // include:[db.Skill,db.Gallery,db.Qualification]
+               where:{id:req.params.id},
+                include:[db.Skill,db.Qualification,db.Image]
 
                     
             }).then( (result) => {
-               //console.log(result);
+               console.log(result);
                 
                 res.json(result)
                 } 
